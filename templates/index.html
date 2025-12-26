@@ -1,0 +1,13 @@
+<html>
+  <body>
+    <h1>hello!! {{name}}<h1>
+        hi. this is {{time}}. this is
+    <ul>
+      {% for item in news_items %}
+        <li>
+          <a href="{{url_for('show_news_item', id=item.id}}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
