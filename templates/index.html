@@ -5,11 +5,11 @@
     <ul>
       {% for item in news_items %}
         <li>
-          <a href="{{ url_for('show_news_item', id=item.id) }}">{{ item.title }}</a>
+          <a target="_blank" href="{{ url_for('show_news_item', id=item.id) }}">{{ item.title }}</a>
         </li>
       {% endfor %}
     </ul>
-    <form>
+    <form action="{{ url_for('create_news_item') }}" method="POST">
       Title: <input name="title"/><br />
       Body: <textarea name="body"></textarea><br />
       <input type="submit" value="Save"/>
